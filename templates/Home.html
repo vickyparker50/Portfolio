@@ -1,0 +1,1089 @@
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+body {
+  margin: 0;
+  font-family: "Raleway", serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to left, rgb(12, 11, 12), rgb(20 15 35));
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.typing {
+  
+  font-family: 'Inconsolata', Consolas, monospace;
+	font-size: 3.2em !important;
+  color: #cd5ff8 !important;
+  font-weight: 600 !important;
+
+	padding-left: 47px !important;
+
+ 
+  position: relative;
+	&::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    color: white;
+    background: var(--background);
+    animation: typing 4s steps(var(--steps)) forwards,
+      caret 1s infinite;
+  }
+}
+:root {
+  --steps: 16; 
+  --background: #1d1f20;
+}
+@keyframes typing {
+	to { width: 0 }
+}
+@keyframes caret {
+	50% { color: transparent }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+html {
+  --section-background-color: linear-gradient(
+    to bottom left,
+    rgba(17, 16, 16, 0.582),
+    rgba(12, 8, 24, 0.904)
+  );
+
+  --image-gradient: linear-gradient(
+    to bottom left,
+    rgba(17, 16, 16, 0.678),
+    rgba(12, 10, 22, 0.863)
+  );
+
+  --imp-text-color: #c770f0;
+}
+
+.purple {
+  color: var(--imp-text-color) !important;
+}
+
+button:focus {
+  box-shadow: none !important;
+}
+
+/* --------- */
+/*  Preloader */
+/* --------- */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background-color: #0c0513;
+  background-image: url(./static/Assets/pre.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#preloader-none {
+  opacity: 0;
+}
+
+#no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* --------- */
+/*Scrollbar   */
+/* --------- */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0c0513;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(178, 121, 216, 0.959);
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(222, 130, 235, 0.911);
+  border-radius: 12px;
+}
+
+/* --------- */
+/* Navbar Section  */
+/* --------- */
+
+
+.navbar {
+     
+      top: 0;
+      left: 0;
+      width: 100%;
+      
+      padding: 15px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar ul li a {
+      position: relative;
+      font-size: 16px;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      display: inline-block;
+      padding: 10px 15px;
+      transition: color 0.3s ease;
+    }
+/* --------- */
+/* Home section */
+/* --------- */
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.1s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+.home-header {
+  padding-top: 80px !important;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.hocardvsv {
+  background-image: var(--image-gradient), url(./static/Assets/home-bg.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  
+}
+
+.home-section {
+  
+  z-index: -1;
+  
+  padding-bottom: 30px !important;
+  padding-top: 10px !important;
+}
+
+.home-content {
+  padding: 9rem 0 2rem !important;
+  color: whitesmoke;
+  text-align: left;
+}
+
+.heading {
+  font-size: 2.4em !important;
+  padding-left: 50px !important;
+}
+
+.heading-name {
+  font-size: 2.5em !important;
+  padding-left: 45px !important;
+}
+
+.main-name {
+  color: #cd5ff8;
+}
+
+.myAvtar {
+  justify-content: center !important;
+  padding-top: 9em !important;
+}
+
+@media (max-width: 767px) {
+  .myAvtar {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+  }
+}
+
+.home-about-section {
+  position: relative;
+  padding-bottom: 70px !important;
+  padding-top: 70px !important;
+}
+
+.home-about-description {
+  color: white !important;
+  padding-top: 100px !important;
+  padding-bottom: 20px !important;
+  text-align: center;
+}
+
+.home-about-body {
+  padding-top: 50px;
+  font-size: 1.2em !important;
+  text-align: left;
+}
+
+.home-about-social {
+  text-align: center !important;
+  padding-top: 25px;
+  color: white !important;
+}
+
+.home-about-social-links {
+  justify-content: center !important;
+  padding-top: 15px !important;
+  display: inline-block !important;
+  position: relative !important;
+  padding-inline-start: 0 !important;
+}
+
+.home-social-icons {
+  position: relative !important;
+  display: inline-block !important;
+  width: 40px !important;
+  height: 40px !important;
+  text-align: center !important;
+  font-size: 1.2em !important;
+  line-height: 2em !important;
+  background: rgba(255, 255, 255, 0.972) !important;
+  border-radius: 50% !important;
+  transition: 0.5s !important;
+}
+
+.home-social-icons::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #68187a;
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+.home-social-icons:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #801f95;
+}
+
+.home-social-icons:hover {
+  color: #87209e;
+  box-shadow: 0 0 5px #87209e;
+  text-shadow: 0 0 2px #87209e;
+}
+
+.social-icons {
+  display: inline-block !important;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.icon-colour {
+  color: #700c86 !important;
+}
+
+/* --------- */
+/* Footer */
+/* --------- */
+.footer {
+  background-color: rgb(10, 4, 22);
+  bottom: 0 !important;
+  padding-top: 10px !important;
+  padding-bottom: 8px !important ;
+}
+.footer-copywright {
+  text-align: center !important;
+}
+
+.footer-body {
+  z-index: 1;
+  text-align: center !important;
+}
+
+@media (max-width: 767px) {
+  .footer-copywright {
+    text-align: center !important;
+  }
+
+  .footer-body {
+    text-align: center !important;
+  }
+}
+
+.footer h3 {
+  font-size: 1em;
+  color: white !important;
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
+.footer-icons {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+  padding: 0 !important;
+}
+
+.blockquote-footer {
+  color: #a588c0 !important;
+}
+/* --------- */
+/* Projects */
+/* --------- */
+.project-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+}
+
+.project-card {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+  height: auto !important;
+}
+
+.project-card-view {
+  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+  color: white !important;
+  background-color: transparent !important;
+  opacity: 0.9 !important;
+  transition: all 0.5s ease 0s !important;
+  height: 100% !important;
+}
+.project-card-view:hover {
+  transform: scale(1.02) !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+}
+
+.blog-card {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+  height: auto !important;
+}
+
+.blog-card-view {
+  background-color: transparent !important;
+  box-shadow: 0 3px 3px 2px rgba(145, 77, 161, 0.459) !important;
+  color: white !important;
+  transition: all 0.5s ease 0s !important;
+  height: 100% !important;
+}
+
+.blog-link {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.blog-link:hover {
+  cursor: pointer !important;
+}
+
+.blog-card-view:hover {
+  transform: scale(1.02) !important;
+  overflow: hidden !important;
+  box-shadow: 0 3px 3px 5px rgba(155, 88, 173, 0.65) !important;
+}
+
+.card-img-top {
+  padding: 20px !important;
+  opacity: 0.8 !important;
+  border-radius: 10px !important;
+}
+
+.blog-img {
+  padding: 0px !important;
+  opacity: 0.8 !important;
+  border-radius: 0px !important;
+}
+
+.btn-primary {
+  color: #fff !important;
+  background-color: #623686 !important;
+  border-color: #623686 !important;
+}
+
+.btn-primary:hover {
+  color: #fff !important;
+  background-color: #6d20c5d7 !important;
+  border-color: #6d20c5d7 !important;
+}
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.project-heading {
+  color: white !important;
+  font-size: 2.3em !important;
+  font-weight: 500 !important;
+  padding-top: 10px !important;
+}
+
+/* --------- */
+/* About */
+/* --------- */
+
+.about-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  
+  color: white !important;
+}
+
+.tech-icons {
+  font-size: 4.5em !important;
+  margin: 15px !important;
+  padding: 10px !important;
+  opacity: 0.93 !important;
+  border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  border-radius: 5px !important;
+  display: table !important;
+  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+  overflow: hidden !important;
+  transition: all 0.4s ease 0s !important;
+}
+
+@media (max-width: 767px) {
+  .tech-icons {
+    margin: 10px !important;
+  }
+}
+
+.tech-icons:hover {
+  transform: scale(1.05) !important;
+  overflow: hidden !important;
+  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+}
+.tech-icon-images {
+  padding: 20px !important;
+  line-height: 1.6 !important;
+}
+
+.quote-card-view {
+  border: none !important;
+  color: white !important;
+  background-color: transparent !important;
+}
+
+.about-activity {
+  list-style: none !important;
+  text-align: left !important;
+  padding-left: 1px !important;
+}
+
+@media (max-width: 767px) {
+  .about-img {
+    padding-top: 0 !important;
+  }
+}
+/* --------- */
+/* Resume */
+/* --------- */
+
+.resume-section {
+  position: relative !important;
+  padding-top: 110px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+  color: white !important;
+}
+
+.resume {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: center;
+}
+
+.resume-left {
+  padding-right: 80px !important;
+}
+
+.resume-right {
+  padding-left: 80px !important;
+}
+
+@media (max-width: 767px) {
+  .resume-left {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+
+  .resume-right {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+}
+.resume .resume-title {
+  font-size: 2em;
+  font-weight: 700;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.resume .resume-item {
+  padding: 0 0 10px 25px;
+  margin-top: -2px;
+  border-left: 2px solid #8a49a8;
+  position: relative;
+}
+
+.resume .resume-item .resume-title {
+  line-height: 18px;
+  font-size: 0.9em;
+  background: #5234795d;
+  padding: 8px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+  text-align: justify;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+  list-style: none;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #8a49a8;
+}
+
+.like-item {
+  padding-top: 10px !important;
+  font-size: 1.1em !important;
+  font-family: sans-serif !important;
+}
+
+.like-btn {
+  background-color: #934cce5e !important;
+  border-color: #934cce5e !important;
+  padding: 0.25rem 0.98rem !important;
+  border-radius: 5px !important;
+  line-height: 1.4 !important;
+  transition: 0.3s ease !important;
+}
+
+.like-btn:hover {
+  transform: translateY(-2px) !important;
+  background-color: #a24dd386 !important;
+  border-color: #a24dd386 !important;
+}
+
+.animate-like {
+  animation-name: likeAnimation;
+  animation-fill-mode: forwards;
+  animation-duration: 0.85s;
+}
+@keyframes likeAnimation {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fork-btn {
+  font-size: 1.1em !important;
+  padding-top: 10px !important;
+}
+
+.fork-btn-inner {
+  line-height: 1.4em !important;
+  background-color: #934cce5e !important;
+  padding: 0.25rem 1.1rem !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+.fork-btn-inner:hover {
+  transform: translateY(-2px) !important;
+  background-color: #a24dd386 !important;
+  border-color: #a24dd386 !important;
+}
+.fork-btn-inner::after {
+  display: none !important;
+}
+
+.animate-like {
+      animation-name: likeAnimation;
+      animation-fill-mode: forwards;
+      animation-duration: 0.85s;
+    }
+    @keyframes likeAnimation {
+      0% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .fork-btn {
+      font-size: 1.1em !important;
+      padding-top: 10px !important;
+    }
+
+    .fork-btn-inner {
+      line-height: 1.4em !important;
+      background-color: #934cce5e !important;
+      padding: 0.25rem 1.1rem !important;
+      vertical-align: middle !important;
+      text-align: center !important;
+    }
+
+    .fork-btn-inner:hover {
+      transform: translateY(-2px) !important;
+      background-color: #a24dd386 !important;
+      border-color: #a24dd386 !important;
+    }
+    .fork-btn-inner::after {
+      display: none !important;
+    }
+    #particles-js {
+  position: fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  width: 100%;
+  height: 100%;
+}
+
+
+</style>
+<body>
+  <div id="particles-js"></div>
+  <div class="hocardvsv">
+  <nav class="navbar">
+    <ul class="text-center">
+      <li><a href="#" class="magnet"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#" class="magnet"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="#" class="magnet"> <i class="fa-solid fa-code"></i>  Skills</a></li>
+      <li><a href="#" class="magnet"><i class="fas fa-tasks"></i> Projects</a></li>
+      <li><a href="#" class="magnet"><i class="fas fa-file-alt"></i> Resume</a></li>
+      <li><a href="#" class="magnet"><i class="fa-solid fa-paper-plane"></i>   Connect</a></li>
+
+     
+    </ul>
+  </nav>
+    <section id="home" class="home-section">
+   
+    <div class="container-fluid">
+      <div class="particle-container"></div>
+      <br><br>
+      <div class="container home-content">
+        <div class="row">
+          <div class="col-md-7 home-header">
+            <h1 class="heading">Hi There! 
+              <span class="wave">👋🏻</span>
+            </h1>
+            <h1 class="heading-name">
+              I'M <strong class="main-name">Vicky Parker</strong>
+            </h1>
+          
+            
+            <h1 class="typing">Software Engineer</h1>
+          </div>
+          <div class="col-md-5" style="padding-bottom: 20px;">
+            <img src="static/Assets/home-main.svg" alt="home pic" class="img-fluid" style="max-height: 450px;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+
+
+      
+     
+       
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 about-description">
+                        <h1>LET ME <span class="purple"> INTRODUCE </span> MYSELF</h1>
+                        <p>
+                            I fell in love with programming and I have at least learnt
+                            something, I think… 🤷‍♂️
+                            <br /><br />
+                            I am fluent in classics like
+                            <b class="purple">C++, Javascript, and Go.</b>
+                            <br /><br />
+                            My field of interest includes building new
+                            <b class="purple">Web Technologies and Products</b> and exploring
+                            areas related to <b class="purple">Blockchain.</b>
+                            <br /><br />
+                            Whenever possible, I apply my passion for developing products
+                            with <b class="purple">Node.js</b> and
+                            <b class="purple">Modern Javascript Libraries and Frameworks</b>,
+                            such as <b class="purple">React.js and Next.js</b>.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="static/Assets/avatar.svg" class="img-fluid" alt="avatar">
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <div class="container-fluid about-section">
+          <div class="container">
+              <div class="row justify-content-center" style="padding: 10px;">
+                  <div class="col-md-7" style="padding-top: 30px; padding-bottom: 50px;">
+                      <h1 style="font-size: 2.1em; padding-bottom: 20px;">
+                          Know Who <strong class="purple">I'M</strong>
+                      </h1>
+                      <div class="quote-card-view">
+                          <blockquote class="blockquote mb-0">
+                              <p style="text-align: justify;">
+                                  Hi Everyone, I am <span class="purple">Soumyajit Behera </span>
+                                  from <span class="purple"> Bhubaneswar, India.</span>
+                                  <br />
+                                  I am currently employed as a software developer at Juspay.
+                                  <br />
+                                  I have completed Integrated MSc (IMSc) in Maths and Computing at BIT Mesra.
+                                  <br />
+                                  <br />
+                                  Apart from coding, some other activities that I love to do!
+                              </p>
+                              <ul>
+                                  <li class="about-activity">Playing Games</li>
+                                  <li class="about-activity">Writing Tech Blogs</li>
+                                  <li class="about-activity">Travelling</li>
+                              </ul>
+                              <p style="color: rgb(155 126 172);">
+                                  "Strive to build things that make a difference!"
+                              </p>
+                              <footer class="blockquote-footer">Soumyajit</footer>
+                          </blockquote>
+                      </div>
+                  </div>
+                  <div class="col-md-5 about-img" style="padding-top: 120px; padding-bottom: 50px;">
+                    <img src="static/Assets/about.png" alt="about" class="img-fluid">
+                  </div>
+              </div>
+              <h1 class="project-heading">
+                  Professional <strong class="purple">Skillset</strong>
+              </h1>
+              <div class="row justify-content-center" style="padding-bottom: 50px;">
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fa-brands fa-python"></i></div>
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fab fa-js"></i></div>
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fab fa-golang"></i></div>
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fab fa-node-js"></i></div>
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fab fa-react"></i></div>
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fab fa-ethereum"></i></div>
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fas fa-database"></i></div>
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fab fa-js-square"></i></div>
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fab fa-git"></i></div>
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fas fa-server"></i></div>
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fas fa-memory"></i></div>
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fas fa-database"></i></div>
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fab fa-python"></i></div>
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fab fa-java"></i></div>
+              </div>
+              <h1 class="project-heading">
+                  <strong class="purple">Tools</strong> I use
+              </h1>
+              <div class="row justify-content-center" style="padding-bottom: 50px;">
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fab fa-apple"></i></div>
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fas fa-code"></i></div>
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fas fa-flask"></i></div>
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fab fa-slack"></i></div>
+                  <div class="col-xs-4 col-md-2 tech-icons"><i class="fas fa-cloud"></i></div>
+              </div>
+        
+          </div>
+      </div>
+      <div class="container">
+        <h1 class="text-center my-4">My Recent <strong class="text-primary">Works</strong></h1>
+        <p class="text-center text-muted">Here are a few projects I've worked on recently.</p>
+        <div id="projects-container" class="row justify-content-center"></div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- first include any tsParticles plugin needed -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles/tsparticles.bundle.min.js"></script>
+
+<!-- then include jquery wrapper -->
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/jquery"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+
+<script>
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuItems = document.querySelectorAll(".magnet");
+
+    menuItems.forEach(item => {
+      item.addEventListener("mousemove", (e) => {
+        const { left, top, width, height } = item.getBoundingClientRect();
+        const x = e.clientX - (left + width / 2);
+        const y = e.clientY - (top + height / 2);
+
+        gsap.to(item, {
+          x: x * 0.3,
+          y: y * 0.3,
+          scale: 1.2,
+          color: "cd5ff8",
+          duration: 0.3,
+          ease: "power2.out"
+        });
+      });
+
+      item.addEventListener("mouseleave", () => {
+        gsap.to(item, {
+          x: 0,
+          y: 0,
+          scale: 1,
+          color: "#fff",
+          duration: 0.3,
+          ease: "power2.out"
+        });
+      });
+    });
+  });
+</script>
+
+
+<script>
+  particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": false,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 1,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 1,
+        "opacity_min": 0,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 2,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 4,
+        "size_min": 0.3,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 1,
+      "direction": "none",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 600
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "bubble"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 250,
+        "size": 0,
+        "duration": 2,
+        "opacity": 0,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 400,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script>
+  
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    
+    
+   
+</body>
+</html>
+
